@@ -1,0 +1,10 @@
+<mat-list>
+    <div mat-subheader>Iphone</div>
+    <mat-list-item *ngFor="let products of products">
+      <mat-icon mat-list-icon>phone_iphone</mat-icon>
+      <div mat-line>
+        <a [routerLink]="['phone/', products.id]"> {{ products.name }}</a>
+      </div>
+      <div mat-line> {{ products.price | currency :"THB "}} </div>
+
+</mat-list-item>

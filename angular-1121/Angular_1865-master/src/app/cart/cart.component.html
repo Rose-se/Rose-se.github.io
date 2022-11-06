@@ -1,0 +1,42 @@
+<div>
+    <div *ngIf="items.length > 0">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Product</th>
+                    <th>Quanity</th>
+                    <th>Price</th>
+                    <th>total</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let list of items; index as i">
+                    <td>{{ i+1  }}</td>
+                    <td>{{ list.name }}</td>
+                    <td>{{ list.quanity }}</td>
+                    <td>{{ list.price  }}</td>
+                    <td>{{ list.quanity * list.price }}</td>
+                    <button 
+                    (click)="clear(list.id)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </tr>
+                
+            </tbody>
+            
+            <tfoot>
+                <td>สินค้าทั้งหมด: {{ IteminCart}}</td>
+                <td>Total {{ totalprice | currency: 'THB '}}</td>
+            </tfoot>
+
+        </table>
+        <br>
+        <button 
+            (click)="deleteCart()">
+                ClearCart
+        </button>
+    </div>
+    
+</div>
