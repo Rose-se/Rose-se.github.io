@@ -30,7 +30,7 @@ class ListController extends Controller
         $object->save();
         return redirect()->route('listapp.index')->with('success','Mutant has been update');
     }
-    public function edit(listapp $listapp){
+    public function edit(ListOrder $listapp){
         return view('listapp.edit',compact('listapp'));
     }
     public function update(Request $request,$id){
@@ -48,8 +48,8 @@ class ListController extends Controller
         $item->save();
         return redirect()->route('listapp.index')->with('success','Mutant has been update');
     }
-    public function destory(listapp $listapp){
-        $item->delete();
+    public function destroy(ListOrder $listapp){
+        $listapp->delete();
         return redirect()->route('listapp.index')->with('success','alert alert alert data has been destroy ');
     }
 }

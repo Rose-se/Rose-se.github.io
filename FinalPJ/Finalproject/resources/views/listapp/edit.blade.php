@@ -28,7 +28,7 @@
                     <div class="col-md-12">
                         <div class="form-g my-2">
                         <strong>Mutant Name</strong>
-                        <input type="name" name="name" value="{{$listappr->name}}"class="form-control" placeholder="Mutant Name">
+                        <input type="name" name="name" value="{{$listapp->name}}"class="form-control" placeholder="Mutant Name">
                         @error('name')
                         <div class="alert alert-danger">{{ $message}}</div>
                         @enderror
@@ -37,7 +37,7 @@
                     <div class="col-md-12">
                         <div class="form-g my-2">
                         <strong>Fullname</strong>
-                        <input type="fullname" name="fullname" value="{{$listappr->fullname}}"class="form-control" placeholder="Fullname">
+                        <input type="fullname" name="fullname" value="{{$listapp->fullname}}"class="form-control" placeholder="Fullname">
                         @error('fullname')
                         <div class="alert alert-danger">{{ $message}}</div>
                         @enderror

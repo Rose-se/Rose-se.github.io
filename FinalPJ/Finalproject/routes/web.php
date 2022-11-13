@@ -12,9 +12,5 @@ Route::get('mutant-create','App\Http\Controllers\ListController@create');
 Route::get('mutant-index','App\Http\Controllers\ListController@index');
 Route::get('mutant-edit','App\Http\Controllers\ListController@edit');
 Route::get('mutant-update','App\Http\Controllers\ListController@update');
-Route::get('mutant-destory','App\Http\Controllers\ListController@destory');
+Route::get('mutant-destroy','App\Http\Controllers\ListController@destroy');
 Route::get('/','App\Http\Controllers\ListController@index');
-Route::controller(ImageController::class)->group(function(){
-    Route::get('/image-upload', 'index')->name('image.form');
-    Route::post('/upload-image', 'storeImage')->name('image.store');
-    });
